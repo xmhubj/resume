@@ -1,0 +1,104 @@
+%-----------------------------------------
+% Michael Wright
+% Resumé
+%
+% URL: http://github.com/mdwrigh2/resume
+% This document is covered under the Creative Commons Attribution 3.0 Unported License
+%-----------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt,letterpaper,final]{moderncv}
+\usepackage{fontspec}
+\moderncvtheme[darkred]{classic}
+
+% DOCUMENT LAYOUT
+\usepackage[scale=0.85]{geometry}
+\setlength{\hintscolumnwidth}{2cm}
+\AtBeginDocument{\recomputelengths}
+% FONTS
+\usepackage[utf8]{inputenc}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+
+% Remove % to set to different fonts
+%\setromanfont [Ligatures={Common},Numbers={OldStyle}]{Adobe Caslon Pro}
+%\setmonofont[Scale=0.8]{Monaco} 
+
+% ---- CUSTOM AMPERSAND
+\newcommand{\amper}{{\fontspec[Scale=.95]{Adobe Caslon Pro}\selectfont\itshape\&}}
+
+% ---- MARGIN YEARS
+%\newcommand{\years}[1]{\marginpar{\scriptsize #1}}
+
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+
+
+% Personal Information 
+\firstname{Michael}
+\familyname{Wright}
+\address{9500 Kingsford Dr.}{Cary, NC 27518}
+\mobile{(919) 656-4962}
+\email{mdwrigh2@ncsu.edu}
+%\homepage{www.derefnull.com/about}
+
+\title{Michael Wright's Resume}
+
+\nopagenumbers{}
+
+\begin{document}
+
+\maketitle
+
+\section{Computer Skills} 
+  \cvline{Languages:}{Java, C, Go, Python, JavaScript}
+\section{Experience} 
+  \cventry{January 2013 -- Present}{Android Frameworks Engineer}{Google}{Mountain View, CA}{}{
+      \begin{itemize}
+        \item Maintainer of Android input subsystem.
+        \item Spearheaded game controller standardization efforts for the Android platform and
+            optimized the gamepad input path (63\% less latency on average).
+        \item Was the lead platform engineer on the Nexus 9 keyboard and added input support for
+            the Always on Display functionality of the Nexus 6.
+        \item Developed the
+            \href{https://developer.android.com/reference/android/media/projection/MediaProjectionManager.html}{MediaProjection APIs}.
+        \item Rewrote the autobrightness algorithm in Android L.
+        \item Member of the Android API Council.
+      \end{itemize}
+  }
+  \cventry{Summer 2012}{Software Engineering Intern}{Google}{Mountain View, CA}{}{
+    \begin{itemize}
+      \item Rewrote Android Virtual Device (AVD) creation and management tools to focus on physical
+          device specifications rather than the emulator's implementation details, allowing
+          developers to create AVDs based on existing, real-world devices.
+    \end{itemize}
+  }
+  \cventry{Fall 2011}{Senior Design Team Lead}{Johns Hopkins University Applied Physics Lab}{}{}{
+    \begin{itemize}
+      \item Developed a library for seamlessly interacting with Flicker, a project that allows for running trusted code modules on top of an extremely small trusted computing base.
+      \item Implemented modules that wrap Intel's Trusted Platform Module's sealing and unsealing functionality.
+      \item Developed modules that implement RSA and a corresponding arbitrary precision math library which do not depend on libc.
+    \end{itemize}
+  }
+  \cventry{Summer 2011}{Technical Solutions Engineering Intern}{Google}{Mountain View, CA}{}{
+    \begin{itemize}
+      \item Extracted ChimpChat, a Java library for interfacing with the Monkey tool, from MonkeyRunner.
+      \item Added view introspection functionality to Monkey, ChimpChat and MonkeyRunner.
+      \item Worked on an SFTP server backed by Google technologies and infrastructure, improving read performance by 4x and implementing proper access control.
+    \end{itemize}
+  }
+  \cventry{May 2010 --\\January 2011}{Research Professional}{Dr. Jiang, NCSU}{Raleigh, NC}{}{
+    \begin{itemize}% \itemsep -2pt % reduce space between items
+      \item Developed a framework to interpose advertisement's interaction with webpages.
+    \end{itemize}
+  }
+\section{Education}
+\cventry{Fall 2008 - Winter 2012}{Computer Science \& Mathematics, North Carolina State University}{Raleigh, NC}{}{Overall GPA: 3.949}{CSC \& MA Majors GPA: 4.0}
+\section{Extra}
+  \cvlistitem{Contributor to open source projects - see \url{https://github.com/mdwrigh2}}
+  \cvlistitem{Member of the USB HID WG, authored a new standard for game controller LEDs}
+  \cvlistitem{5th overall, 1st in USA for the IEEExtreme programming competition 6.0}
+  \cvlistitem{Winner of NCSU XCDC}
+\end{document}
